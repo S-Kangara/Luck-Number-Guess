@@ -11,11 +11,15 @@ while True:
     print(f"You have {max_attempts} attempts. Good Luck!")
 
     while attempts < max_attempts:
-        guess = int(input("Enter Your guess: "))
+        try:
+            guess = int(input("Enter your guess: "))
+        except ValueError:
+            print("Please enter a valid number!")
+            continue
         attempts +=1
         
-        if guess == secret_number:
-            print(f"Correct! You guessed the number in {attempts} attempts!")
+        if attempts == max_attempts and guess != secret_number:
+            print(f"Out of attempts! The number was {secret_number}.")
             break       
         elif guess < secret_number:
             print("Too Low! Try Again...") 
@@ -23,7 +27,7 @@ while True:
             print("Too High! Try Again...")
 
 
-    play_again = input("\nDo you want to play gain? (y/n): ").lower()
+    play_again = input("\nDo you want to play again? (y/n): ").lower()
     if play_again != 'y':
         print("Thanks for playing! GoodBye!")
         break

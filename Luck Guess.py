@@ -7,8 +7,8 @@ while True:
     attempts = 0
     max_attempts = 3
 
-    print("\nI'm thinking of a number between 1 and 10...")
-    print(f"You have {max_attempts} attempts. Good Luck!")
+    print("\nI'm thinking of a number between 1 and 10...\n")
+    print(f"You have {max_attempts} attempts. Good Luck!\n\n")
 
     while attempts < max_attempts:
         try:
@@ -29,9 +29,5 @@ while True:
 
     play_again = input("\nDo you want to play again? (y/n): ").lower()
     if play_again != 'y':
-        print("Thanks for playing! GoodBye!")
+        print("Thanks for playing! Goodbye!")
         break
-
-    
-
-      

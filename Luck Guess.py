@@ -19,7 +19,7 @@ while True:
         attempts +=1
         
         if attempts == max_attempts and guess != secret_number:
-            print(f"Out of attempts! The number was {secret_number}.")
+            print(f"Out of attempts! The number was {secret_number}")
             break       
         elif guess < secret_number:
             print("Too Low! Try Again...") 

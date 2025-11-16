@@ -7,8 +7,8 @@ while True:
     attempts = 0
     max_attempts = 3
 
-    print("\nI'm thinking of a number between 1 and 10...")
-    print(f"You have {max_attempts} attempts. Good Luck!")
+    print("\nI'm thinking of a number between 1 and 10...\n")
+    print(f"You have {max_attempts} attempts. Good Luck!\n\n")
 
     while attempts < max_attempts:
         try:
@@ -19,7 +19,7 @@ while True:
         attempts +=1
         
         if attempts == max_attempts and guess != secret_number:
-            print(f"Out of attempts! The number was {secret_number}.")
+            print(f"Out of attempts! The number was {secret_number}")
             break       
         elif guess < secret_number:
             print("Too Low! Try Again...") 
@@ -29,9 +29,5 @@ while True:
 
     play_again = input("\nDo you want to play again? (y/n): ").lower()
     if play_again != 'y':
-        print("Thanks for playing! GoodBye!")
+        print("Thanks for playing!\n Goodbye!")
         break
-
-    
-
-      
